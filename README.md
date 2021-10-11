@@ -1,3 +1,3 @@
 # js-Fundamentals-SoftUni
 
-The solutions for the challenges from the JavaScript fundamentals course
+My solutions for the challenges from the JavaScript fundamentals course in SoftUni
