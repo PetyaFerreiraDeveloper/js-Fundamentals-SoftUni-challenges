@@ -9,12 +9,11 @@ function magic(arr) {
     }
     console.log(sumFirstRow) // 15
 
-    for (let i = 1; i < arrL; i++) {
+    for (let i = 0; i < arrL; i++) {
         let sumCurrentRow = 0;
         let sumColumn = 0;
         let currElement = arr[i];
         for (let j = 0; j < currElement.length; j++) {
-            sumCurrentColumn += currElement[]
             sumCurrentRow += currElement[j]
         }
         if (sumCurrentRow !== sumFirstRow) {
@@ -22,9 +21,10 @@ function magic(arr) {
             console.log('false');
             break;
         } 
-
-        
     }
+
+
+    
     if (bool) {
         console.log('true')
     }
