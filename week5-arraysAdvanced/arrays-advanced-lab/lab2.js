@@ -1,6 +1,6 @@
 // functions map(), filter(), sort(), reduce()
 
-// using map to loop through an array and do manipulation of its elements. Map returns an array
+// using map to loop through an array and do manipulation of all its elements. Map returns an array
 function arraysDemo() {
 
     let arr= ['5', '123', '55', '11'];
@@ -8,13 +8,11 @@ function arraysDemo() {
     // for (let i= 0; i < arr.length; i++) {
     //     arrOfNum.push(Number(arr[i]));
     // }
-
     let arrOfNum = arr.map((el) => {
         return Number(el);
     })
 
-    console.log(arrOfNum)
-
+    console.log(arrOfNum) // [5, 123, 55, 11]
 }
 
 arraysDemo()
@@ -27,28 +25,27 @@ function arraysDemo1() {
         return el * 2;
     })
 
-    console.log(arrOfNum)
-
+    console.log(arrOfNum) // [10, 4, 14, 20]
 }
 
 arraysDemo1()
 
-// filter example - creates a new array and we can filter it by a criteria
+// filter example - we can go through an array and filter out a result by a criteria and it will return a new array with the filtered result
 function arraysDemo2() {
 
     let arr= [5, 122, 55, 12];
     let newArr = arr.filter((el) => {
-        if (el % 2 === 0) {
+        if (el % 2 === 0) { // this can also be written like: return el % 2 === 0
             return el;
         }
     })
 
-    console.log(newArr)
+    console.log(newArr) // [122, 12]
 }
 
 arraysDemo2()
 
-// reduce method example - reduces final result, which can be a logic. The first argument in the reduce function is an accumulator, the second arguments are all the elements in an array
+// reduce method example - reduces final result, which can be a logic. The first argument in the reduce function is an accumulator, the second argument is each element of an array. It can have two arguments, where the second argument the 0 in this case is what the sum value is at the start of the function. 
 function arraysDemo3() {
 
     let arr = [5, 10, 20, 5];
@@ -61,7 +58,7 @@ function arraysDemo3() {
     let sum = arr.reduce((sum, el)=>{
         return sum + el;
     }, 0)
-    console.log(sum);
+    console.log(sum); // 40
 
 }
 
@@ -72,8 +69,8 @@ function arraysDemo4() {
 
     let arr = [5, 10, 0, -5];
     let sortedArr = arr.sort((a, b) => {
-        return a- b // sorts in Asc order
-        return b - a // sorts in Dsc order
+        return a - b // sorts in Asc order [-5, 0, 5, 10]
+        return b - a // sorts in Dsc order [10, 5, 0, -5]
     })
 
     console.log(sortedArr)
@@ -87,8 +84,8 @@ function arraysDemo5() {
 
     let arr = ['b', 'ccs', 'aa'];
     let sortedArr = arr.sort((a, b) => {
-        // return a.length - b.length; // compare the length of strings
-        return a.localeCompare(b); // sorts alpabetically
+        return a.length - b.length; // compare the length of strings ['b', 'aa', 'ccs']
+        return a.localeCompare(b); // sorts alpabetically ['aa', 'b', 'ccs']
     })
 
     console.log(sortedArr)

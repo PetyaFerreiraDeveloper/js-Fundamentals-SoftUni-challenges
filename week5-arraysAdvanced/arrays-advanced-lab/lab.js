@@ -4,8 +4,8 @@
 
 function arraysDemo() {
     let arr = [1, 2, 3, 4, 5];
-    arr.push(999)
-    console.log(arr) // [1, 2, 3, 4, 5, 999]
+    arr.push(999);
+    console.log(arr); // [1, 2, 3, 4, 5, 999]
 }
 
 arraysDemo()
@@ -14,8 +14,8 @@ arraysDemo()
 
 function arraysDemo1() {
     let arr = [1, 2, 3, 4, 5];
-    arr.unshift(999)
-    console.log(arr) // [999, 1, 2, 3, 4, 5]
+    arr.unshift(999);
+    console.log(arr); // [999, 1, 2, 3, 4, 5]
 }
 
 arraysDemo1()
@@ -25,8 +25,8 @@ arraysDemo1()
 function arraysDemo2() {
     let arr = [1, 2, 3, 4, 5];
     let lastElement = arr.pop();
-    console.log(arr) // [1, 2, 3, 4]
-    console.log(lastElement) // 5
+    console.log(arr); // [1, 2, 3, 4]
+    console.log(lastElement); // 5
 }
 
 arraysDemo2()
@@ -36,8 +36,8 @@ arraysDemo2()
 function arraysDemo3() {
     let arr = [1, 2, 3, 4, 5];
     let firstElement = arr.shift();
-    console.log(arr) // [2, 3, 4, 5]
-    console.log(firstElement) // 1
+    console.log(arr); // [2, 3, 4, 5]
+    console.log(firstElement); // 1
 }
 
 arraysDemo3()
@@ -46,8 +46,8 @@ arraysDemo3()
 
 function arraysDemo4() {
     let arr = [1, 2, 3, 4, 5];
-    let indexOfElement = arr.indexOf(3)
-    console.log(indexOfElement) // 3
+    let indexOfElement = arr.indexOf(3);
+    console.log(indexOfElement); // 3
 }
 
 arraysDemo4()
@@ -56,8 +56,8 @@ arraysDemo4()
 
 function arraysDemo4() {
     let arr = [1, 2, 3, 4, 1];
-    let lastIndexOfElement = arr.lastIndexOf(1)
-    console.log(lastIndexOfElement) // 4
+    let lastIndexOfElement = arr.lastIndexOf(1);
+    console.log(lastIndexOfElement); // 4
 }
 
 arraysDemo4()
@@ -66,9 +66,9 @@ arraysDemo4()
 
 function arraysDemo5() {
     let arr = [1, 2, 3, 4, 5];
-    let indexOfElement = arr.indexOf(3)
+    let indexOfElement = arr.indexOf(3);
     arr.splice(indexOfElement, 0, 999); 
-    console.log(arr) // [1, 2, 999, 3, 4, 5]
+    console.log(arr); // [1, 2, 999, 3, 4, 5]
 }
 
 arraysDemo5()
@@ -77,22 +77,22 @@ arraysDemo5()
 
 function arraysDemo6() {
     let arr = [1, 2, 3, 4, 5];
-    let indexOfElement = arr.indexOf(3)
+    let indexOfElement = arr.indexOf(3);
     let removedElement = arr.splice(indexOfElement, 1, 999); // arr = [1, 2, 999, 4, 5]
-    console.log(arr) // [1, 2, 999, 4, 5]
-    console.log(removedElement) // 3
+    console.log(arr); // [1, 2, 999, 4, 5]
+    console.log(removedElement); // 3
 }
 
 arraysDemo6()
 
-// arr.splice() Removes elements from an array and, if necessary, inserts new elements in their place (the third argument). returns — An array containing the elements that were deleted.
+// arr.splice(index, numberOfElements) Removes the specified number of elements. It modifies the array and returns the removed elements
 
 function arraysDemo7() {
     let arr = [1, 2, 3, 4, 5];
-    let indexOfElement = arr.indexOf(3)
-    arr.splice(indexOfElement, 2);
-    console.log(arr)
-    // console.log(firstElement)
+    let indexOfElement = arr.indexOf(3);
+    let removedElements = arr.splice(indexOfElement, 2);
+    console.log(arr); // [1, 2, 5]
+    console.log(removedElements); // [3, 4]
 }
 
 arraysDemo7()
@@ -102,35 +102,34 @@ arraysDemo7()
 function arraysDemo8() {
     let arr = [1, 2, 3, 4, 5];
     let arr2 = arr;
-    arr.push(999)
-    console.log(arr)
-    console.log(arr2)
-   
+    arr.push(999);
+    console.log(arr);
+    console.log(arr2);
 }
 
 arraysDemo8()
 
-// copying of array - the right way with arr.slice(0). Argument is the index of the starting element. Slice() returns new array based on the original array and starting from the specified intex. If it has two arguments, the second is the index of the element to which we want to cut the original array. It will bring all elements between the two indexes
+// copying of array - the right way with arr.slice(0). Argument is the index of the starting element from which we start slicing a piece of the original array. Slice() returns new array based on the original array and starting from the specified index. If it has two arguments, the second is the index of the element to which we want to cut the original array. It will bring all elements between the two indexes, not including the last element
 // Slice is a pure funciton because it doesn't change the original array
 
 function arraysDemo9() {
     let arr = [1, 2, 3, 4, 5];
     let arr2 = arr.slice(0);
-    arr.push(999)
-    console.log(arr)
-    console.log(arr2)
-   
+    arr.push(999);
+    console.log(arr); // [1, 2, 3, 4, 5]
+    console.log(arr2); // [1, 2, 3, 4, 5, 999]
 }
 
 arraysDemo9()
 
+// If splice(firstIndex, secondIndex) has two arguments, the second is the index of the element to which we want to cut the original array. It will bring all elements between the two indexes, not including the last element
+// Slice is a pure funciton because it doesn't change the original array
 function arraysDemo10() {
     let arr = [1, 2, 3, 66, 15, 18, -5, 5];
-    let index = arr.indexOf(66);
+    let index = arr.indexOf(66); // 3
     let arr2 = arr.slice(index, index + 3);
-    console.log(arr)
-    console.log(arr2)
-   
+    console.log(arr); // [1, 2, 3, 66, 15, 18, -5, 5]
+    console.log(arr2); // [66, 15, 18]
 }
 
 arraysDemo10()
