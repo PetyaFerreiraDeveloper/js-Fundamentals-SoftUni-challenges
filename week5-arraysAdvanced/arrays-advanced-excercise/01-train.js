@@ -5,39 +5,38 @@ function trainFun(arr) {
     })
     // remove the initial wagon from the arr
     arr.shift();
-    let maxCapacity = arr[1];
+    let maxCapacity = Number(arr[0]);
     // remove the capacity from arr
     arr.shift()
-    console.log(arr.length)
     for (let i = 0; i < arr.length; i++) {
         
-        let newPassangers = arr[i].split(' ');
-        let numPassangers = Number(newPassangers[1]);
-        // arr ['Add 10','Add 0','30','10','75']
+        let newPassangersArr = arr[i].split(' ');
+        let newWagon = Number(newPassangersArr[1]);
+        let numNewPassengers = Number(newPassangersArr[0]);
 
-        if (newPassangers.length > 1) {
-            wagons.push(numPassangers)
+        if (newPassangersArr.length > 1) {
+            wagons.push(newWagon)
         } else {
-
-        }
+            for (let j = 0; j < wagons.length; j++) {
+                let numPassInWagon = wagons[j];
+                if ((numPassInWagon + numNewPassengers) <= maxCapacity) {
+                    numPassInWagon += numNewPassengers;
+                    wagons.splice(j, 1, numPassInWagon);
+                    break;
+                } 
+            }
+        }   
     }
-    // let newArr = arr.map((el) => {
-    //     el = el.split(' ');
-    //     if (el.length > 1) {
-    //         wagons.push(Number(el[1]))
-    //     } else {
-    //         if ()
-    //     }
-    // })
-
-    console.log(wagons)
+    console.log(wagons.join(' '))
 }
 
-trainFun(['32 54 21 12 4 0 23',
-'75',
-'Add 10',
-'Add 0',
-'30',
+trainFun(['0 0 0 10 2 4',
 '10',
-'75']
+'Add 10',
+'10',
+'10',
+'10',
+'8',
+'6']
+
 )
