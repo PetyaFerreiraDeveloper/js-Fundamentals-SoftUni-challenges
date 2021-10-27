@@ -107,3 +107,18 @@ function arraysDemo6() {
 }
 
 arraysDemo6()
+
+// forEach goes through each element of an array
+// with forEach i only take values - do not change the arr (do not create new array)
+// We use forEach for printing
+
+function arraysDemo7() {
+    let arr = [5, 10, 0, -5];
+    arr.forEach(num => console.log(num))
+}
+
+arraysDemo7()
+
+// for (let c of cats) {
+//     c.meow()
+// }
