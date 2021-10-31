@@ -91,8 +91,16 @@ function testClass() {
         constructor(name, grade) {
             this.name = name;
             this.grade = grade;
+            this.speak = () => {
+                console.log('Hey');
+            }
         }
     }
     // creating an instance of the class
     let student = new Student('Peter', 5.00);
+    let student1 = new Student();
+    console.log(student1);
+    student.speak();
 }
+
+testClass()
