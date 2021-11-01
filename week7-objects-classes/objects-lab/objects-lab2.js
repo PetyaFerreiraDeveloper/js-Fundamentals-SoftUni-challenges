@@ -92,7 +92,7 @@ function testClass() {
             this.name = name;
             this.grade = grade;
             this.speak = () => {
-                console.log('Hey');
+                return 'Hey';
             }
         }
     }
@@ -100,7 +100,47 @@ function testClass() {
     let student = new Student('Peter', 5.00);
     let student1 = new Student();
     console.log(student1);
-    student.speak();
+    console.log(student.speak());
 }
 
-testClass()
+//testClass()
+
+//deep copy of an object
+
+function copyObject() {
+    let person = {
+        name: 'Todd', 
+        age: 20,
+        pet: {
+            name: 'Lasi',
+            age: 2
+        }
+    }
+    let copy = JSON.parse(JSON.stringify(person));
+    person.pet.name = 'Lari';
+    console.log(`Person pet name: ${person.pet.name}`);
+    console.log(`Copy pet name: ${copy.pet.name}`);
+}
+
+//copyObject()
+
+//check if property exists in an object
+function checkProperty() {
+    let person = {
+        name: 'Todd', 
+        age: 20,
+        // pet: {
+        //     name: 'Lasi',
+        //     age: 2
+        // }
+    }
+    
+    if (person.hasOwnProperty('pet')) {
+        person.pet.name = 'Lari'
+    } else {
+        person.pet = {'name': 'Hari', 'age': 3};
+    }
+    console.log(person);
+}
+
+//checkProperty()
