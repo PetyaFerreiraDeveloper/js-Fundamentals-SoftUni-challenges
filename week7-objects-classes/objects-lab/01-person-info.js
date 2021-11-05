@@ -4,6 +4,7 @@ function createPerson(firstName, lastName, age) {
         lastName,
         age
     }
+    
     console.log(person);
     return person
 }

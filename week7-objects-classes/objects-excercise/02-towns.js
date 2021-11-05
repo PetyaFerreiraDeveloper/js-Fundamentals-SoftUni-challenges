@@ -1,9 +1,12 @@
 function town(arr) {
-
-    for (let rowElement of arr) {
-        let [town, latitude, longitude] = rowElement.split(' | ');
-        
-        console.log(town);
+    let towns = {};
+    for (let line of arr) {
+        let tableRow = line.split(' | ');
+        let [town, latitude, longitude] = tableRow;
+        towns.town = town;
+        towns.latitude = (Number(latitude)).toFixed(2);
+        towns.longitude = (Number(longitude)).toFixed(2);
+        console.log(towns);
     }
 }
 

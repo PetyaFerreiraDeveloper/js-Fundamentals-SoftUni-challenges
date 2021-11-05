@@ -1,34 +1,32 @@
-function movies(arr) {
-    let movies = [];
-    for (line of arr) {
+function solve(arr) {
+   let moviesArr = [];
+    for (let line of arr) {
         if (line.includes('addMovie')) {
             let name = line.split('addMovie ')[1];
-            movies.push({name});
-        } else if (line.includes('directedBy')) {
-            let [name, director] = line.split(' directedBy ');
-            let movie = movies.find((obj) => obj.name === name);
+            moviesArr.push({name})
+        } else if (line.includes('directedBy')){
+            let [name, director] = line.split(' directedBy ')
+            let movie = moviesArr.find(obj => obj.name === name);
             if (movie) {
                 movie.director = director;
             }
         } else if (line.includes('onDate')) {
             let [name, date] = line.split(' onDate ');
-            let movie = movies.find((obj) => obj.name === name);
+            let movie = moviesArr.find(obj => obj.name === name);
             if (movie) {
                 movie.date = date;
             }
         }
     }
 
-    movies.forEach(movie => {
+    moviesArr.forEach(movie => {
         if (movie.hasOwnProperty('name') && movie.hasOwnProperty('director') && movie.hasOwnProperty('date')) {
-            let finalList = JSON.stringify(movie);
-            console.log(finalList);
+            console.log(JSON.stringify(movie))
         }
     })
-
 }
 
-movies([
+solve([
     'addMovie The Avengers',
     'addMovie Superman',
     'The Avengers directedBy Anthony Russo',
@@ -37,4 +35,5 @@ movies([
     'Captain America directedBy Joe Russo',
     'addMovie Captain America'
     ]
+    
 )
