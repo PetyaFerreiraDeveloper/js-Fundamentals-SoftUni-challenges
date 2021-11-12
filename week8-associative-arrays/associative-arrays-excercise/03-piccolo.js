@@ -19,9 +19,10 @@ function piccolo(arr) {
     if (sorted.length === 0) {
         console.log("Parking Lot is Empty");
     } else {
-        for (let num of sorted) {
-            console.log(num);
-        }
+        console.log(sorted.join('\n'))
+        // for (let num of sorted) {
+        //     console.log(num);
+        // }
     }
 
 }
@@ -29,6 +30,12 @@ function piccolo(arr) {
 piccolo(['IN, CA2844AA',
 'IN, CA1234TA',
 'OUT, CA2844AA',
-'OUT, CA1234TA']
+'IN, CA9999TT',
+'IN, CA2866HI',
+'OUT, CA1234TA',
+'IN, CA2844AA',
+'OUT, CA2866HI',
+'IN, CA9876HH',
+'IN, CA2822UU']
 
 )
