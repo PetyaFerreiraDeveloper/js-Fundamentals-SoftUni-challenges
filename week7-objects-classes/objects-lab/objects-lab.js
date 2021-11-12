@@ -87,7 +87,7 @@ class Dog {
 let dog = new Dog();
 //dog.speak();
 
-// object iteration with for in cycle
+// object iteration with FOR IN cycle
 
 function objIter() {
     let person = {
