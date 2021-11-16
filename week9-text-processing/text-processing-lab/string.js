@@ -25,6 +25,7 @@ let last = str.lastIndexOf('o');
 let sub = strNew.substring(5, 10);
 //console.log(sub); // JavaS
 
+
 // substring(startIndex) returns everything after the starting index
 let sub1 = strNew.substring(5);
 
