@@ -3,7 +3,7 @@ function phone(str) {
     let validNum;
     let numbers = [];
     while ((validNum = regExp.exec(str)) !== null) {
-        numbers.push(validNum[0])
+        numbers.push(validNum[0]);
     }
     console.log(numbers.join(', '));
 }
