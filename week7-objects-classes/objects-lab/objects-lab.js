@@ -95,9 +95,9 @@ function objIter() {
         age: 3
     }
     for (let per in person) {
-        console.log(per);
+        //console.log(per);
         console.log(person[per]);
     }
 }
 
-// objIter()
+objIter()

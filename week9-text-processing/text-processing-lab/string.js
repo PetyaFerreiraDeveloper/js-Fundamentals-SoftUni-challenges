@@ -23,7 +23,8 @@ let last = str.lastIndexOf('o');
 
 // substring(startIndex, endIndex) - startIndex is included, endIndex is excluded
 let sub = strNew.substring(5, 10);
-//console.log(sub); // JavaS
+console.log(sub); // JavaS
+console.log(strNew);
 
 
 // substring(startIndex) returns everything after the starting index
@@ -62,4 +63,4 @@ let text5 = 'My name is Petya'
 let newText5 = text5.padEnd(7, '.')
 // console.log(newText5);
 let test1 = text5.slice(3, 5);
-console.log(test1);
+//console.log(test1);

@@ -4,4 +4,4 @@ function matchFull(str) {
     console.log(newArr.join(' '));
 }
 
-matchFull('Ivan Ivanov, ivan ivanov, Ivan ivanov, ivan Ivanov, IVan Ivanov, Ivan IvAnov, Ivan	Ivanov')
+matchFull('Ivan Ivanov, ivan ivanov, Ivan Ovanov, ivan Ivanov, IVan Ivanov, Ivan IvAnov, Ivan	Ivanov')
