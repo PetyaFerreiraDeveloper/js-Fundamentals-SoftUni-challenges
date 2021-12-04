@@ -3,6 +3,9 @@
 let num = /(?<price>\d+(?:\.\d+)?)/g
 // ?: at the front of a group, will remove it from the final array with groups, but it is still a valid condition for the regex
 
+// naming a group
+
+
 // USING MATCH TO RETURN AN ARRAY OF THE MATCHES
 let text = 'Peter: 123 Mark: 456';
 let regexp = /([A-Z][a-z]+): (\d+)/g;
