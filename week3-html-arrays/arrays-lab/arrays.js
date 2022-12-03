@@ -63,4 +63,7 @@ let testArr = [];
 testArr[0] = 10;
 testArr[1] = 6;
 let arrayLength = testArr.length;
-console.log(testArr)
+// console.log(testArr)
+
+let newTest = [1, 2, 3,4];
+console.log(newTest.includes(8));

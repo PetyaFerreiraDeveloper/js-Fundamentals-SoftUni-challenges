@@ -8,9 +8,9 @@ ch = str.charAt(2)
 // Manipulating of strings
 
 let greet = 'Hello '
-let name = 'Petya'
+let firstName = 'Petya'
 
-let result = greet.concat(name);
+let result = greet.concat(firstName);
 /// console.log(result);
 
 let strNew = 'I am JavaScript developer'
@@ -23,19 +23,33 @@ let last = str.lastIndexOf('o');
 
 // substring(startIndex, endIndex) - startIndex is included, endIndex is excluded
 let sub = strNew.substring(5, 10);
-console.log(sub); // JavaS
+console.log(sub); // JS
 console.log(strNew);
 
 
 // substring(startIndex) returns everything after the starting index
 let sub1 = strNew.substring(5);
 
-// replace(search, replacement)
+// replace(search, replacement) It replaces only the first one
 let text = 'Hello world, you are big'
 let replaced = text.replace('o', 'a')
 // console.log(replaced);
 
-// split(separator)
+// replaceAll(search, replacement). replaces all characters
+let text111 = 'Hello world, you are big'
+let replaced1 = text.replaceAll('o', 'a')
+// console.log(replaced1);
+
+// replace all characters in a string with another character
+let password = 'myPassword';
+let encrypted = password.replace(/./g, '*');
+// console.log(encrypted);
+
+// split(separator) returns an array with the splitted elements
+let fullSentence = 'I love Rio De Janeiro';
+let splittedSentence = fullSentence.split(' ');
+console.log(splittedSentence);
+
 // includes(substr) - returns true or -1
 let text1 = 'I love fruits'
 //console.log(text1.includes('fruits'));

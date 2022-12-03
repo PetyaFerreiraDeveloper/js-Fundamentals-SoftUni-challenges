@@ -97,7 +97,7 @@ function arraysDemo7() {
 
 arraysDemo7()
 
-// copying of array - THE WRONG WAY! they are referental types. which means that if we assign a new array the value of another array the new array will take the values of the first one, even if we change the first one. Because they take the same memory, because they are referental
+// copying of array - THE WRONG WAY! they are referental types. which means that if we assign a new array the value of another array the new array will take the values of the first one, even if we change the first one. Because they take the same memory, because they are referental type
 
 function arraysDemo8() {
     let arr = [1, 2, 3, 4, 5];
@@ -122,7 +122,7 @@ function arraysDemo9() {
 
 arraysDemo9()
 
-// If splice(firstIndex, secondIndex) has two arguments, the second is the index of the element to which we want to cut the original array. It will bring all elements between the two indexes, not including the last element
+// If slice(firstIndex, secondIndex) has two arguments, the second is the index of the element to which we want to cut the original array. It will bring all elements between the two indexes, not including the last element
 // Slice is a pure funciton because it doesn't change the original array
 function arraysDemo10() {
     let arr = [1, 2, 3, 66, 15, 18, -5, 5];
