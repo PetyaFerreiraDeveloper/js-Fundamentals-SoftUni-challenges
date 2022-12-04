@@ -21,6 +21,12 @@ let str1 = 'Intro to programming'
 let last = str.lastIndexOf('o');
 //console.log(last);
 
+// remove last character in string
+let word = 'hello';
+word = word.slice(0, -1);
+//console.log(word); 'hell'
+
+
 // substring(startIndex, endIndex) - startIndex is included, endIndex is excluded
 let sub = strNew.substring(5, 10);
 console.log(sub); // JS
